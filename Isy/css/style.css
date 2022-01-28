@@ -1,0 +1,185 @@
+/*mobile first*/
+body{
+    margin: 5%;
+    background-image: url(/img/fondo.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    font-weight: 900;
+}
+#logo{
+    width: 50%;
+    z-index: 1;
+    position: absolute;
+    padding-bottom:3%;
+}
+#mobile{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    padding-top: 2%;
+}
+#uno{
+    margin-top: 105%;
+}
+#formulario{
+    text-align: center;
+    width: 70%;
+    margin-left: 10%;
+}
+input[type="text"]::placeholder{
+    padding: left 10%;;
+}
+#ask{
+    font-weight: 700;
+    font-size: large;
+}
+input{
+    width:98%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 3%;
+    border-color: #181818;
+    border-radius: 5%;
+    background-color: transparent;
+    /*---------------------------*/
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+::-webkit-input-placeholder{
+    color: black;
+    padding-left: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+button{
+    width: 100.6%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 3%;
+    background-color: #181818;
+    color:white;
+    font-weight: 900;
+    /*------------------------------*/
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+#bold{
+    font-weight: 900;
+}
+#italic{
+    font-style: italic;
+}
+
+
+/*------------segunda parte--------------*/
+
+
+#segundo{
+    display: none;
+    height: 50%;
+} 
+#thanks{
+    width: 55%;
+}
+#dos{
+    display: block;
+}
+div #dos img{
+    width: 90%;
+    text-align: center;
+    padding-bottom: 60%;
+}
+
+footer{
+    text-align: center;
+    font-weight: 900;
+    margin-top: 15%;
+}
+
+/*--------------------------------------------*/
+
+/*responsive*/
+@media(min-width: 600px) {
+    h1{
+        font-weight: 900;
+        font-size: 3em;
+        width: 50%;
+    }
+    #primero{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 26%;
+        z-index: 1;
+        position: absolute;
+        margin-left: 6%;
+        margin-top: -129px;
+    }
+    #mobile{
+        width: 90%;
+        height: 40%;
+        display: flex;
+        position:relative;
+        z-index: -1;
+        margin-top: -434px;
+        margin-left: 237px;
+    }
+    #uno{
+        margin-top: 0%;
+    }
+    #formulario{
+        width: 40%;
+        margin: 0%;
+        margin-top: -331px;
+    }
+    #ask{
+        margin-left: -118px;
+    }
+    #easy{
+        margin-top: 7%;
+    }
+    #imgs{
+        padding-top: 10%;
+    }
+    /*-------------segunda parte---------------*/
+    div #dos img{
+        width: 30%;
+        margin-left: 426px;
+        margin-top: 68px;
+    }
+    #thanks{
+        margin-left: 111px;
+        width: 1111px;
+        height: 138px;
+        left: 164px;
+        top: 234px;
+        
+        font-style: normal;
+        font-weight: 900;
+        font-size: 118px;
+        line-height: 138px;
+    }
+    #dos p{
+        position: absolute;
+        margin-top: -65px;
+        left: 80px;
+        font-size: 69px;
+        line-height: 81px;
+    }
+    footer p{
+        margin-top: 0%;
+    }
+
+
+
+
+
+}
+

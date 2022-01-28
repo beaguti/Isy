@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Esto es Isy</title>
+</head>
+<body>
+    <div id="primero">
+        <header>
+            <h1>LA PRIMERA RED <br/>SOCIAL FÁCIL DE USAR</h1>
+            <div id="imgs">
+                <img id="logo" src="img/logo.png"/>
+                <img id="mobile" src="img/mobile.png"/>
+            </div>
+        </header>
+        <section id="uno">
+            <div id="formulario">
+                <label id="ask">¿Quieres contribuir en este proyecto?</label><br/>
+                <input type="text" id="input" placeholder="Introduce tu nombre"/><br/>
+                <button onclick="enviar()">ENVIAR</button>
+            </div>
+            <div id="easy">
+                <h2>ISY ES EASY</h2>
+                <p><span id="bold">Isy</span> es la primera red social de fácil uso. <br/> Dirigida a aquellas personas que se les <span id="italic">“hace bola”</span> las otras redes sociales.</p>
+                <p>Creamos <span  id="bold">Isy</span> para que los usuarios no <span id="italic">“den el coñazo”</span> a sus hijos, amigos y vecinos más <span id="italic">“manitas con
+                    los ordenadores”.</span> Planteamos nuestra app como una alternativa a aquellas que son tan complicadas y
+                    que ni siquiera conocemos bien sus funcionalidades.</p>
+                <p>Compartir fotos, videos, guardar recuerdos, noticias, estados... de la manera más sencilla y guiada con tutoriales que se pueden consultar en cualquier momento.</p>
+                <p>Compartir momentos es muy <span id="bold">isy</span>.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="segundo">
+        <p id="nArriba"></p>
+        <header>
+            <h1 id="thanks"></h1>
+        </header>
+        <section id="dos">
+            <p>¡¡Por contribuir con nuestro proyecto!!</p>
+            <img id="SdoLogo" src="img/logo.png"/>
+        </section>
+        <p id="nAbajo"></p>
+    </div>
+    <footer>
+        <p>© Isy 2021</p>
+    </footer>
+    
+</body>
+</html>
+<script> 
+const nombres=["Markel","Julen","Jon","Ane","Laia","June","Nahia","Izaro","Aimar","Oihan","Ander",
+"Ibai","Oier","Danel","Nora","Irati","Aiur","Lucía","Martina","Leire","Bea","Oscar","Maura","Gaizka","Elaia",
+"Jorge","Amets","Naia","Sara","Alain","Mateo","Jare","Lea","Sofia","Emma","Unai","Eneko","Peru","Mateo",
+"Lucas","Izan","Hugo","Aitana","Izar","Iraia","Alex","Chloe","Alba","Maren","Naroa","Aritz","Daniel",
+"Beñat","Adrian","Peio","Diego","Nikole","Daniela"];
+const n1=[];
+const n2=[];
+    function carga(){
+       for(var i=0;i<20;i++){
+           const random = Math.floor(Math.random()*nombres.length);
+           var  nr=nombres[random];
+           if(i<10){
+            n1[i]=nr;
+           }else{
+            n2[i-10]=nr;
+           }
+       }
+       console.log(n1);
+       var Sn1=n1.join(" ");
+       var Sn2=n2.join(" ");
+       let p1 = document.getElementById("nArriba");
+       let p2 = document.getElementById("nAbajo");
+       p1.innerHTML(Sn1);
+       p2.innerHTML(Sn2);
+    }
+    function enviar(){
+        let usuario = document.getElementById("input");
+        let mensajeSaludo = document.getElementById("thanks");
+
+        if (usuario.value!='') {
+            let pOcult = document.getElementById("primero");
+            pOcult.style.display = "none";
+            let secOcult = document.getElementById("segundo");
+            secOcult.style.display = "block";
+            mensajeSaludo.innerHTML="¡¡GRACIAS "+usuario.value+"!!";
+            footer.css("margin-top", "-46%");
+            carga();
+        }else{
+            alert("esta wea no chucla. Inténtalo otra vez."); /*bootstrap*/
+        }
+        
+    }
+
+
+</script>
