@@ -75,7 +75,49 @@ button{
 #italic{
     font-style: italic;
 }
+#nArriba{
+    font-style: italic;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    animation-name: letras;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes letras {
+    0% {
+        margin-left: 0%;
+      }
+      50% {
+        margin-left: 50%;
+      }
+      100% {
+        margin-left: 0%;
+      }  
 
+}
+#nAbajo{
+    font-style: italic;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    animation-name: letrasAbajo;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes letrasAbajo {
+    0% {
+        margin-left: 60%;
+      }
+      50% {
+        margin-left: 0%;
+      }
+      100% {
+        margin-left: 60%;
+      }  
+
+    
+}
 
 /*------------segunda parte--------------*/
 

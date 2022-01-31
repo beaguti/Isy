@@ -78,8 +78,8 @@ const n2=[];
        var Sn2=n2.join(" ");
        let p1 = document.getElementById("nArriba");
        let p2 = document.getElementById("nAbajo");
-       p1.innerHTML(Sn1);
-       p2.innerHTML(Sn2);
+       p1.innerHTML=Sn1;
+       p2.innerHTML=Sn2;
     }
     function enviar(){
         let usuario = document.getElementById("input");
@@ -91,7 +91,7 @@ const n2=[];
             let secOcult = document.getElementById("segundo");
             secOcult.style.display = "block";
             mensajeSaludo.innerHTML="¡¡GRACIAS "+usuario.value+"!!";
-            footer.css("margin-top", "-46%");
+            // footer.css("margin-top", "-46%");
             carga();
         }else{
             alert("esta wea no chucla. Inténtalo otra vez."); /*bootstrap*/
